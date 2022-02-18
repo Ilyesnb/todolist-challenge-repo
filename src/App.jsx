@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Todolist from "./components/Todolist"
 import TodoItems from "./components/TodoItems"
+import TodoInfo from "./components/TodoInfo"
 import './App.css'
 function App() {
   const [msg, setMsg] = useState("")
@@ -12,6 +13,7 @@ function App() {
       <TodoItems/>
       <TodoItems/>
       <TodoItems/>
+      <TodoInfo/>
       </div>
     </div>
   )
