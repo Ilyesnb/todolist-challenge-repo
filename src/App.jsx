@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <Todolist sendList={(m)=>{setMsg(m)}} myTodo={msg}/>
       <div className="margin">
-
       <TodoItems/>
       <TodoItems/>
       <TodoItems/>
