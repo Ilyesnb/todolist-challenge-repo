@@ -107,6 +107,7 @@
   transform: translateY(-2px);
   box-shadow: 0 0px 7px 0px hsl(210, 2%, 59%);
   border-color: hsl(236, 33%, 92%);
+  text-decoration: line-through;
 }
 .todo-text {
   font-size: 18px;
@@ -114,6 +115,9 @@
   margin-left: 15px;
   margin-top: 5px;
 
+}
+.todo-text:hover{
+  opacity: 0,1;
 }
 #unknown{
   margin-left: 30px;
