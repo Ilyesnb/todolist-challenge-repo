@@ -1,17 +1,19 @@
-import list from "./components/Todo/list.js"
-import Input from "./components/Todo/Input"
-import Header from "./components/Todo/Header"
-import TodoItems from "./components/Todo/TodoItems"
-import './App.css'
+import Input from "./Components/Input"
+import Header from "./Components/Header"
+import TodoItems from "./Components/TodoItems"
+import { useSelector } from "react-redux"
+import { selectTodoList } from "./Slices/TodoSlice"
+import './App.css' 
 function App() {
+  const TodoList = useSelector(selectTodoList)
 
   return (
-    <div className="App">
+    <div className="App"> 
       <Input/>
       <Header/>
       <div className="margin">
-      {list.map((item,index)=>(
-        <TodoItems key={index} todo={item.name}/>
+      {TodoList.map((item,index)=>(
+        <TodoItems key={index} todo={item.add} />
       ))}
       </div>
     </div>

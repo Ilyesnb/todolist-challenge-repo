@@ -1,5 +1,5 @@
 import React from "react";
-import IconCheck from "../../images/icon-check.svg";
+import IconCheck from "../images/icon-check.svg";
 
 function TodoItems({todo}) {
   return (

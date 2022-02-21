@@ -1,15 +1,29 @@
-import React,{useState} from 'react'
+import {useState} from 'react'
+import { useDispatch } from 'react-redux';
+import { SaveTodo } from '../Slices/TodoSlice';
 
 function Input() {
     const [list, setList] = useState(""); 
+    const dispatch= useDispatch()
     const handelChange = (event) => {
       setList(event.target.value);
+      
   
     };
     const handelSubmit = (event)=>{
       event.preventDefault();
-  
+      console.log(`Adding ${list}`);
+      dispatch(SaveTodo({
+        add:list,
+        done:false,
+        id:Date.now(),
+      }))
+      setList("")
+      
     }
+  
+   
+    
   return (
     <div>
         <div className="new-todo">

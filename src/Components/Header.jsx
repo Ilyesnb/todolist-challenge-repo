@@ -1,5 +1,5 @@
-import LightDesktop from "../../images/bg-desktop-light.jpg";
-import MoonIcon from "../../images/icon-moon.svg";
+import LightDesktop from "../images/bg-desktop-light.jpg";
+import MoonIcon from "../images/icon-moon.svg";
 function Header() {
   return (
     <div className="header">
