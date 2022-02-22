@@ -7,9 +7,13 @@ function TodoItems({todo}) {
       <div id="unknown" className="cercle">
         <img src={IconCheck} />
       </div>
+      
       <div id="unknown" className="todo-text">
         {todo}
       </div>
+      <button className="btn-delete">X</button>
+      
+      
     </div>
   );
 }

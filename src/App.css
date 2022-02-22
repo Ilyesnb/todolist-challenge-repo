@@ -93,12 +93,10 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid white;
-  cursor: pointer;
   transition: all .25s ease;
   transition-property: box-shadow, transform, border-color;
   border-bottom: 1px solid hsl(236, 33%, 92%);
   border-radius: 5px;
-  cursor: pointer;
   overflow: hidden;
   box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.1);
 
@@ -107,13 +105,25 @@
   transform: translateY(-2px);
   box-shadow: 0 0px 7px 0px hsl(210, 2%, 59%);
   border-color: hsl(236, 33%, 92%);
-  text-decoration: line-through;
+  /* text-decoration: line-through; */
+  
 }
 .todo-text {
   font-size: 18px;
   color: black;
   margin-left: 15px;
   margin-top: 5px;
+  cursor: default;
+
+}
+.btn-delete{
+  position: sticky;
+  left: 90%;
+  border-style: none;
+  background-color: hsl(0,0%,98%);
+  font-size: 17px;
+  color:hsl(236, 9%, 61%) ;
+  cursor: pointer;
 
 }
 .todo-text:hover{
@@ -123,11 +133,69 @@
   margin-left: 30px;
 
 }
+
 .margin{
-  display: grid;
-  grid-template-columns: repeat(1,1fr);
+ display: flex;
+ flex-direction: column;
   margin-top: 300px;
   margin-left: 339px;
+}
+.todo-items-info {
+  width: 49%;
+  margin-left: 30px;
+  height: 70px;
+  background-color:hsl(0,0%,98%) ;
+  display: flex;
+  align-items: center;
+  color: hsl(233, 14%, 35%);
+  padding-left: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+  border-radius: 5px;
+}
+.items-left{
+  cursor: default;
+}
+.items-statuses {
+  display: flex;
+  justify-content: center;
+}
+
+.items-statuses span  {
+  padding: 0 4px;
+  cursor: pointer;
+}
+
+.items-clear {
+  cursor: pointer;
+  text-align: end;
+}
+
+.items-statuses span:hover, .items-clear:hover {
+  color: hsl(220, 98%, 61%);
+}
+
+.items-statuses .active  {
+  color: hsl(220, 98%, 61%);
+}
+
+.todo-items-info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0px 7px 0px hsl(210, 2%, 59%);
+  border-color: hsl(236, 33%, 92%);
+}
+@media screen and (max-width:1189px) {
+  .margin{
+    margin-left: 266px;
+
+  }
+}
+@media screen and (max-width:1000px) {
+  .margin{
+    margin-left: 216px;
+
+  }
 }
 
 
