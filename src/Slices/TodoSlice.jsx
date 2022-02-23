@@ -11,7 +11,7 @@ const TodoSlice = createSlice({
   reducers: {
     SaveTodo:(state,action) => {
       state.todoList.push(action.payload)
-    }
+    },
     
   }
 });

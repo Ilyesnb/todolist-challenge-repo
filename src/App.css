@@ -126,9 +126,7 @@
   cursor: pointer;
 
 }
-.todo-text:hover{
-  opacity: 0,1;
-}
+
 #unknown{
   margin-left: 30px;
 
@@ -141,18 +139,21 @@
   margin-left: 339px;
 }
 .todo-items-info {
+  display: flex;
   width: 49%;
-  margin-left: 30px;
   height: 70px;
-  background-color:hsl(0,0%,98%) ;
-  display: flex;
-  align-items: center;
-  color: hsl(233, 14%, 35%);
+  overflow: hidden;
+  margin-left: 30px;
   padding-left: 30px;
-  display: flex;
-  justify-content: space-between;
   padding-right: 30px;
   border-radius: 5px;
+  align-items: center;
+  transition: all .25s ease;
+  color: hsl(233, 14%, 35%);
+  background-color:hsl(0,0%,98%) ;
+  justify-content: space-between;
+  box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.1);
+  transition-property: box-shadow, transform, border-color;
 }
 .items-left{
   cursor: default;
@@ -185,7 +186,7 @@
   box-shadow: 0 0px 7px 0px hsl(210, 2%, 59%);
   border-color: hsl(236, 33%, 92%);
 }
-@media screen and (max-width:1189px) {
+/* @media screen and (max-width:1189px) {
   .margin{
     margin-left: 266px;
 
@@ -196,7 +197,7 @@
     margin-left: 216px;
 
   }
-}
+} */
 
 
 
