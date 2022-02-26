@@ -2,8 +2,15 @@ import React from "react";
 import IconCheck from "../images/icon-check.svg";
 import {useContext} from "react"
 import {ThemeContext} from "../context/ThemeContext"
+import {removeTodo} from "../Slices/TodoSlice"
+import {useDispatch} from "react-redux"
 
-function TodoItems({todo}) {
+
+function TodoItems({mytodo}) {
+  const dispatch =useDispatch()
+  const handelRemove = (todo) =>{
+    dispatch(removeTodo(todo.id))
+  }
   const {theme}=useContext(ThemeContext)
   return (
     <div id="unknown" className={theme? "todo-item light" : "todo-item dark"}>
@@ -13,10 +20,10 @@ function TodoItems({todo}) {
       </div>
       
       <div id="unknown" className={theme? "todo-text light-text" : "todo-text dark-text"}>
-        {todo}
+        {mytodo}
       </div>
       </div>
-      <button className={theme? "btn-delete light-btn" : "btn-delete dark-btn"}>X</button>
+      <button className={theme? "btn-delete light-btn" : "btn-delete dark-btn"} onClick={handelRemove}>X</button>
       
       
     </div>

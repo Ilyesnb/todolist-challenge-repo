@@ -19,7 +19,7 @@ function Input() {
       SaveTodo({
         add: list,
         done: false,
-        id: Date.now(),
+        // id: Date.now(),
       })
     );
     setList("");
