@@ -4,6 +4,8 @@
   padding: 0px;
   
 }
+
+
 .LightDesktop{
   position: absolute;
   top: 0;
@@ -50,9 +52,19 @@
   background-color: hsl(0,0%,98%);
  
 }
+.todoText.light-input{
+  background-color: hsl(0,0%,98%);
+}
+.todoText.dark-input{
+  background-color: hsl(235, 24%, 19%);
+  color: white;
+  
+  
+
+}
 .todoText::placeholder{
   color: hsl(233, 15%, 67%);
-  opacity: 0,5px;
+  
 }
 .header{
   width: 100%;
@@ -71,6 +83,14 @@
   align-items: center;
 
 }
+.check-mark.light-check{
+  background-color: hsl(0,0%,98%);
+}
+.check-mark.dark-check{
+  background-color: hsl(235, 24%, 19%);
+
+  
+}
 .cercle{
   width: 25px;
   height: 25px;
@@ -81,6 +101,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.cercle.light-cercle{
+  border: 2px solid hsl(233, 10%, 84%);
+
+}
+.cercle.dark-cercle{
+  border: 2px solid hsl(237, 14%, 26%);
+  
+
 }
 .cercle:hover{
   border-color: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
@@ -101,6 +130,19 @@
   box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.1);
 
 }
+.todo-item.dark{
+  background-color: hsl(235, 24%, 19%);
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+
+
+}
+.todo-item.light{
+  background-color: hsl(0,0%,98%);
+  border-bottom: 1px solid white;
+  border-bottom: 1px solid hsl(236, 33%, 92%);
+ 
+}
+
 .todo-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 0px 7px 0px hsl(210, 2%, 59%);
@@ -108,12 +150,32 @@
   /* text-decoration: line-through; */
   
 }
+.todo-item.dark:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 0px 7px 0px hsl(235, 21%, 11%);
+  border-color: hsl(235, 24%, 19%);
+
+}
+.complited{
+  display: flex;
+}
+.complited:hover{
+  text-decoration: line-through;
+}
 .todo-text {
   font-size: 18px;
   color: black;
   margin-left: 15px;
   margin-top: 5px;
   cursor: default;
+
+}
+.todo-text.light-text{
+  color: black;
+
+}
+.todo-text.dark-text{
+  color: white;
 
 }
 .btn-delete{
@@ -125,6 +187,13 @@
   color:hsl(236, 9%, 61%) ;
   cursor: pointer;
 
+}
+.btn-delete.light-btn{
+  background-color: hsl(0,0%,98%);
+  color:hsl(236, 9%, 61%) ;
+}
+.btn-delete.dark-btn{
+  background-color: hsl(235, 24%, 19%);
 }
 
 #unknown{
@@ -154,6 +223,16 @@
   justify-content: space-between;
   box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.1);
   transition-property: box-shadow, transform, border-color;
+}
+.todo-items-info.lightinfo{
+  background-color:hsl(0,0%,98%) ;
+  color:hsl(233, 14%, 35%);
+
+}
+.todo-items-info.darkinfo{
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(233, 14%, 35%);
+
 }
 .items-left{
   cursor: default;
@@ -186,7 +265,12 @@
   box-shadow: 0 0px 7px 0px hsl(210, 2%, 59%);
   border-color: hsl(236, 33%, 92%);
 }
-/* @media screen and (max-width:1189px) {
+.todo-items-info.darkinfo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0px 7px 0px hsl(235, 21%, 11%);
+  border-color: hsl(235, 24%, 19%);
+}
+@media screen and (max-width:1189px) {
   .margin{
     margin-left: 266px;
 
@@ -197,7 +281,7 @@
     margin-left: 216px;
 
   }
-} */
+}
 
 
 
