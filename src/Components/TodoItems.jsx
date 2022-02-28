@@ -8,8 +8,8 @@ import {useDispatch} from "react-redux"
 
 function TodoItems({mytodo}) {
   const dispatch =useDispatch()
-  const handelRemove = (todo) =>{
-    dispatch(removeTodo(todo.id))
+  const handelRemove = () =>{
+    dispatch(removeTodo())
   }
   const {theme}=useContext(ThemeContext)
   return (

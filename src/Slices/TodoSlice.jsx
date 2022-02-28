@@ -13,7 +13,7 @@ const TodoSlice = createSlice({
       state.todoList.push(action.payload);
     },
     removeTodo: (state, action) => {
-      state.todoList = state.todoList.filter(todo => todo.id !== action.payload);
+      state.todoList.splice(state.todoList.findIndex((arrow) => arrow.id === action.payload), 1);
       console.log(action);
     },
   },
