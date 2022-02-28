@@ -20,7 +20,6 @@ function App() {
       <TodoInfo/>
       </div>
       </ThemeContextProvider>
-
     </div>
   )
 }
