@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { SaveTodo } from "../Slices/TodoSlice";
+import { SaveTodo,removeTodo } from "../Slices/TodoSlice";
 import CheckMark from "../images/icon-check.svg"
 import {useContext} from "react"
 import {ThemeContext} from "../context/ThemeContext"
@@ -19,8 +19,8 @@ function Input() {
       SaveTodo({
         add: list,
         done: false,
-        // id: Date.now(),
-      })
+        id: Date.now(),
+      }),
     );
     setList("");
   };

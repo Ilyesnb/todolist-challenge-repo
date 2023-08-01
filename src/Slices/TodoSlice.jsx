@@ -11,10 +11,11 @@ const TodoSlice = createSlice({
   reducers: {
     SaveTodo: (state, action) => {
       state.todoList.push(action.payload);
+      // console.log(action);
     },
     removeTodo: (state, action) => {
-      state.todoList.splice(state.todoList.findIndex((arrow) => arrow.id === action.payload), 1);
-      console.log(action);
+      state.todoList.filter(todo => todo.id !== action.payload);
+      console.log(action);      
     },
   },
 });
